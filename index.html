@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campusbier Landingpage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="top-header">
+        Die Abholung findet ab jetzt wieder am Schmied im Hone statt.
+      </div>
+
+      <!--Navigationsleiste-->
+      <div class="navbar-container">
+        <button class="hamburger">
+          <img
+            src="assets/icons/global/hamburger_menu.svg"
+            alt="Hamburger Menü"
+          />
+        </button>
+        <a href="index.html">
+          <img
+            class="navlogo"
+            src="assets/icons/global/cb_logo_hell.svg"
+            alt="Logo"
+          />
+        </a>
+
+        <ul class="nav-links-desktop">
+          <li>
+            <a href="cb_shop.html">Shop</a>
+          </li>
+
+          <!--Dropdown: "Unsere Biere"-->
+          <li class="dropdown">
+            <a
+              class="dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Unsere Biere
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" href="cb_hell.html">Campusbier Hell</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="cb_dunkel.html"
+                  >Campusbier Dunkel</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="index.html#info-section">Campusbier-Projekt</a>
+          </li>
+        </ul>
+
+        <div class="nav-icons">
+          <a href="warenkorb.html">
+            <img
+              class="cart-icon"
+              src="assets/icons/global/warenkorb.svg"
+              alt="Warenkorb"
+            />
+            <span class="cart-count" id="cart-total">€0.00</span>
+          </a>
+        </div>
+      </div>
+
+      <!--Sidebar für mobile Ansicht-->
+      <div class="sidebar" id="sidebar">
+        <ul>
+          <li>
+            <a href="cb_shop.html">Shop</a>
+          </li>
+          <li>
+            <span>Unsere Biere</span>
+            <ul class="sidebar-sub">
+              <li>
+                <a href="cb_hell.html">Campusbier Hell</a>
+              </li>
+              <li>
+                <a href="cb_dunkel.html">Campusbier Dunkel</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="index.html#info-section">Campusbier-Projekt</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="overlay" id="overlay"></div>
+
+      <!--Hero Slider-->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!--Slide 1: "Campusbier"-->
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="assets/bilder/landingpage/banner1.webp"
+              alt="First slide"
+            />
+            <div class="hero-content">
+              <h1>CAMPUS BIER</h1>
+              <p>
+                Tauche ein in die faszinierende Welt des hochschuleigenen Biers
+                und erfahre alles über seinen Projekthintergrund.
+              </p>
+              <a href="#info-section" class="green-button">ERFAHRE MEHR</a>
+            </div>
+          </div>
+
+          <!--Slide 2: "Mitmachen & Gestalten"-->
+          <div class="carousel-item">
+            <img
+              class="d-block w-100 flip-x"
+              src="assets/bilder/landingpage/banner2.webp"
+              alt="Second slide"
+            />
+            <div class="hero-content">
+              <h1>MITMACHEN &amp; GESTALTEN</h1>
+              <p>
+                Entdecke spannende Möglichkeiten bei Campusbier: Bring dich in
+                Produktentwicklung, Marketing, Social Media oder IT ein und
+                gestalte unser Projekt aktiv mit!
+              </p>
+              <a href="#teamAccordion" class="green-button">MITMACHEN</a>
+            </div>
+          </div>
+
+          <!--Slide 3: "Unser Shop"-->
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="assets/bilder/landingpage/banner1.jpg"
+              alt="Third slide"
+            />
+            <div class="hero-content">
+              <h1>UNSER SHOP</h1>
+              <p>
+                Entdecke unser frisches Helles und feinherbes Dunkles! Hol dir
+                dein Campusbier im 6er-Pack, Geschenkset oder in der Kiste
+                direkt nach Hause.
+              </p>
+              <a href="cb_shop.html" class="green-button">ZUM SHOP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--ABSCHNITT 1: NEUES IM SHOP-->
+      <div class="title-center">
+        <span class="sub-heading">AKTUELLE PRODUKTE</span>
+        <h1>NEUES IM SHOP</h1>
+      </div>
+      <div class="grey-gradient"></div>
+
+      <!--Produkte-->
+      <div class="product-container">
+        <div class="product-card">
+          <img src="assets/bilder/shop/6er_hell.webp" alt="Produktbild" />
+          <div class="product-info">
+            <h3>6er Campusbier Hell</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€12.00 EUR</a>
+            <a class="product-unit-price">€ 6.00/l</a>
+            <button class="green-button" data-id="1">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="assets/bilder/shop/6er_hell_geschenk.webp"
+            alt="Produktbild"
+          />
+          <div class="product-info">
+            <h3>6er Campusbier Hell Geschenk</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€15.00 EUR</a>
+            <a class="product-unit-price">€ 7.50/l</a>
+            <button class="green-button" data-id="2">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/bilder/shop/cb_hell_kiste.webp" alt="Produktbild" />
+          <div class="product-info">
+            <h3>Kiste Campusbier hell</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€39.50 EUR</a>
+            <a class="product-unit-price">€ 4.94/l</a>
+            <button class="green-button" data-id="3">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/bilder/shop/6er_dunkel.webp" alt="Produktbild" />
+          <div class="product-info">
+            <h3>6er Campusbier Dunkel</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€12.00 EUR</a>
+            <a class="product-unit-price">€ 6.00/l</a>
+            <button class="green-button" data-id="4">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="assets/bilder/shop/6er_dunkel_geschenk.webp"
+            alt="Produktbild"
+          />
+          <div class="product-info">
+            <h3>6er Campusbier Dunkel Geschenk</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€15.00 EUR</a>
+            <a class="product-unit-price">€ 7.50/l</a>
+            <button class="green-button" data-id="5">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img
+            src="assets/bilder/shop/cb_dunkel_kiste.webp"
+            alt="Produktbild"
+          />
+          <div class="product-info">
+            <h3>Kiste Campusbier Dunkel</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€39.50 EUR</a>
+            <a class="product-unit-price">€ 4.94/l</a>
+            <button class="green-button" data-id="6">In den Warenkorb</button>
+          </div>
+        </div>
+      </div>
+
+      <!--"WEITERE PRODUKTE VON CAMPUSBIER"-->
+      <section class="more-products-section">
+        <h2 class="section-title">WEITERE PRODUKTE VON CAMPUSBIER</h2>
+
+        <div class="more-products-container">
+          <!--Seife-->
+          <div class="more-product-card">
+            <div class="more-product-image">
+              <img
+                src="assets/bilder/landingpage/soap.jpg"
+                alt="Handgemachte Seife"
+              />
+            </div>
+            <h3>SEIFE</h3>
+            <p>
+              Frisch, natürlich, lokal – unsere handgemachte Seife bringt nicht
+              nur gute Laune ins Bad, sondern auch regionale Qualität an deine
+              Haut.
+            </p>
+          </div>
+
+          <!--Honig-->
+          <div class="more-product-card">
+            <div class="more-product-image">
+              <img
+                src="assets/bilder/landingpage/honey.jpg"
+                alt="Campus Honig"
+              />
+            </div>
+            <h3>HONIG</h3>
+            <p>
+              Echte Osnabrücker Bienenpower! Direkt vom Campus aufs Brot –
+              naturbelassener Honig mit Charakter und kurzer Lieferkette.
+            </p>
+          </div>
+
+          <!--Bier-->
+          <div class="more-product-card">
+            <div class="more-product-image">
+              <img
+                src="assets/bilder/landingpage/beer.jpg"
+                alt="Campusbier Original"
+              />
+            </div>
+            <h3>BIER</h3>
+            <p>
+              Das Original vom Campus – unser Campusbier ist das Ergebnis
+              studentischer Braukunst: ehrlich, süffig, unverwechselbar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--ABSCHNITT 2: "MITTEILUNG IN EIGENER SACHE"-->
+      <div id="info-section" class="text-box2">
+        <span class="sub-heading">CAMPUSBIER-PROJEKT</span>
+        <h2 class="section-title">MITTEILUNG IN EIGENER SACHE</h2>
+
+        <div class="info-box">
+          <p>
+            Praxisnahe Lehre und Forschung für Osnabrück und die Region!
+            Gemeinsam betreiben Lehrende und Studierende das CAMPUSBIER-Projekt!
+            Wir sind ein interdisziplinäres Team aus Studierenden und
+            Forschenden der Hochschule Osnabrück. Diese Struktur bringt
+            natürlich auch immer wieder Veränderungen, vor allem in personeller
+            Hinsicht, mit sich. Es liegt in der Natur der Sache, dass unsere
+            Studierenden ihr Studium beenden und dann die Hochschule verlassen.
+            So ist es mit zwei langjährigen Projektangehörigen geschehen und das
+            reißt ein Loch in die Organisation. Daher lief es in der
+            zurückliegenden Zeit nicht immer rund. Nun haben wir uns neu
+            aufgestellt und wollen wieder unseren üblichen Service bieten.
+            Größte Änderung: Die Abholung findet nicht mehr wie gewohnt an
+            unserem Standort am Hafen statt. Stattdessen bitten wir nun in
+            unsere "Heimat", den Schmied im Hone, Oldenburger Landstr. 62.
+            Solltet ihr also eine Bestellung aufgeben, dann werdet ihr per Mail
+            von uns kontaktiert, um einen individuellen Abholtermin für den
+            Schmied zu vereinbaren.
+          </p>
+          <button class="green-button">ZUM PROJEKT</button>
+        </div>
+      </div>
+
+      <!--ABSCHNITT 3: "WOFÜR STEHT CAMPUSBIER?"-->
+      <section class="about-section">
+        <div class="about-container">
+          <div class="about-images">
+            <img
+              src="assets/bilder/landingpage/cb_dunkel.png"
+              alt="Campusbier Dunkel"
+              class="bottle-img"
+            />
+            <img
+              src="assets/bilder/landingpage/cb_hell.png"
+              alt="Campusbier Hell"
+              class="bottle-img"
+            />
+          </div>
+
+          <div class="about-content">
+            <span class="sub-heading">WAS MACHEN WIR EIGENTLICH?</span>
+            <h2 class="section-title">WOFÜR STEHT CAMPUSBIER?</h2>
+
+            <div class="info-box">
+              <p>
+                Praxisnahe Lehre und Forschung für Osnabrück und die Region!
+                Gemeinsam betreiben Lehrende und Studierende das
+                CAMPUSBIER-Projekt! Wir sind ein interdisziplinäres Team aus
+                Studierenden und Forschenden der Hochschule Osnabrück.
+              </p>
+
+              <p>
+                Uns verbindet die Begeisterung für unser
+                <strong>CAMPUSBIER</strong> und innovative Lösungen der
+                Lebensmittelbranche. Unser Antrieb ist es, am
+                Lebensmittelstandort Osnabrück einen Leuchtturm für innovative
+                Lehre und erlebbare Forschung zu schaffen, als Zentrum eines
+                lebendigen Netzwerkes.
+              </p>
+
+              <p>
+                Wir haben uns das Ziel gesetzt, Lehre attraktiv zu gestalten,
+                Forschung und Menschen zu verbinden und offene
+                Experimentierfelder zu schaffen. Dabei ist es uns wichtig, neue
+                digitale Lösungen und Geschäftsideen zu erproben, langfristige
+                Praxispartnerschaften aufzubauen sowie Studierende in spannenden
+                Projekten auf ihre Zukunft vorzubereiten.
+              </p>
+
+              <p>
+                Dazu entwickeln wir in Lehr- und Forschungsvorhaben eigene
+                Produkte, wie unser CAMPUSBIER, schaffen Handelsplattformen, wie
+                unseren Online-Shop und testen neue Distributionswege, wie
+                unsere Click &amp; Collect-Boxen.
+              </p>
+
+              <div class="about-btn-wrapper">
+                <a href="cb_hell.html" class="green-button"
+                  >ZU UNSEREN BIEREN</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--ABSCHNITT 4: "MITMACHEN & GESTALTEN"-->
+      <section class="about-section about-section-join">
+        <div class="about-container about-container-top">
+          <div class="about-images">
+            <img
+              src="assets/bilder/landingpage/opportunities.webp"
+              alt="Möglichkeiten bei Campusbier"
+              class="about-photo"
+            />
+          </div>
+
+          <div class="about-content">
+            <span class="sub-heading">MITMACHEN & GESTALTEN</span>
+            <h2 class="section-title">MÖGLICHKEITEN BEI CAMPUSBIER</h2>
+
+            <div
+              class="accordion accordion-flush custom-accordion"
+              id="teamAccordion"
+            >
+              <!--Produktentwicklung-->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <img
+                      src="assets/icons/other/lightbulb-line.svg"
+                      alt=""
+                      class="accordion-icon me-3"
+                    />
+                    Produktentwicklung
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#teamAccordion"
+                >
+                  <div class="accordion-body">
+                    Tauche ein in die faszinierende Welt der Produktentwicklung
+                    bei Campusbier, wo Spaß an der Arbeit im Labor auf
+                    innovative Ideen und Trends trifft! Unser Team sucht
+                    kreative Köpfe, die eine Leidenschaft für neue
+                    Produktneuheiten und Trends haben. Hier hast du die
+                    einzigartige Gelegenheit, innovative Bierprodukte zu
+                    gestalten und unsere Marke weiterzuentwickeln. Wir suchen
+                    nach engagierten Teammitgliedern, die Freude an kreativen
+                    Prozessen haben und gleichzeitig ein Auge für
+                    Qualitätsstandards und Geschmack haben. Sei Teil unseres
+                    dynamischen Teams und trage dazu bei, die Zukunft des
+                    Campusbiers mitzugestalten!
+                  </div>
+                </div>
+              </div>
+
+              <!--Marketing und Vertrieb-->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <img
+                      src="assets/icons/other/price-tag-3-line.svg"
+                      alt=""
+                      class="accordion-icon me-3"
+                    />
+                    Marketing und Vertrieb
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#teamAccordion"
+                >
+                  <div class="accordion-body">
+                    In unserem aufregenden Marketing- und Vertriebsprojekt bei
+                    Campusbier suchen wir enthusiastische Teammitglieder, die
+                    eine Leidenschaft für kreative Vermarktungsstrategien und
+                    den Ausbau von Vertriebskanälen haben. Deine Aufgabe wird es
+                    sein, innovative Marketingkampagnen zu entwickeln, um unsere
+                    Marke zu stärken und unser einzigartiges Campusbier einem
+                    breiteren Publikum zugänglich zu machen. Du wirst eng mit
+                    einem dynamischen Team zusammenarbeiten, um
+                    Vertriebsmöglichkeiten zu maximieren und Beziehungen zu
+                    Partnern aufzubauen. Wenn du eine kreative Denkweise, eine
+                    Affinität zu Marketingstrategien und eine Begeisterung für
+                    den Vertrieb mitbringst, bist du bei uns genau richtig.
+                    Werde Teil unseres Teams und trage dazu bei, die
+                    Erfolgsgeschichte von Campusbier weiter zu schreiben!
+                  </div>
+                </div>
+              </div>
+
+              <!--Kommunikation und Social Media-->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    <img
+                      src="assets/icons/other/message-2-line.svg"
+                      alt=""
+                      class="accordion-icon me-3"
+                    />
+                    Kommunikation und Social Media
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#teamAccordion"
+                >
+                  <div class="accordion-body">
+                    Bereichere unser Team im spannenden Projekt der
+                    Kommunikation und Social Media bei Campusbier! Hier suchen
+                    wir nach talentierten Individuen, die nicht nur eine
+                    Leidenschaft für ansprechende Kommunikation haben, sondern
+                    sich auch in der Betreuung unseres Instagram-Accounts voll
+                    entfalten wollen. Deine Verantwortung umfasst nicht nur die
+                    Pflege und Weiterentwicklung unserer Online-Präsenz, sondern
+                    auch die Gestaltung innovativer Social-Media-Kampagnen. Du
+                    arbeitest eng mit unserem Team zusammen, um
+                    Kommunikationsstrategien zu entwickeln, die unsere Botschaft
+                    effektiv vermitteln. Wenn du ein Gespür für kreativen
+                    Content, ein Auge für Details und eine Leidenschaft für die
+                    Welt der sozialen Medien mitbringst, bist du bei uns genau
+                    richtig. Werde Teil unseres Teams und trage dazu bei, die
+                    Marke Campusbier durch eine herausragende
+                    Online-Kommunikation zu stärken!
+                  </div>
+                </div>
+              </div>
+
+              <!--IT und Digitalisierung-->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    <img
+                      src="assets/icons/other/computer-line.svg"
+                      alt=""
+                      class="accordion-icon me-3"
+                    />
+                    IT und Digitalisierung
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#teamAccordion"
+                >
+                  <div class="accordion-body">
+                    Ergreife die Chance, die digitale Transformation bei
+                    Campusbier mitzugestalten! In unserem IT- und
+                    Digitalisierungsprojekt suchen wir nach engagierten
+                    Teammitgliedern, die ihre Leidenschaft für Technologie und
+                    IT-Support einbringen möchten. Du wirst eine Schlüsselrolle
+                    in der Shop-Pflege übernehmen und gleichzeitig
+                    IT-Unterstützung in verschiedenen Projekten bieten. Deine
+                    Aufgaben umfassen die Sicherstellung der reibungslosen
+                    Funktion unseres Online-Shops sowie die Integration von
+                    IT-Lösungen, um Prozesse zu optimieren. Wir suchen nach
+                    Teammitgliedern mit einem starken technischen Verständnis,
+                    die bereit sind, innovative Ideen in die Tat umzusetzen.
+                    Wenn du Interesse an der Schnittstelle zwischen IT und
+                    Unternehmensentwicklung hast, freuen wir uns darauf, dich in
+                    unserem dynamischen Team willkommen zu heißen. Gestalte mit
+                    uns die Zukunft von Campusbier durch innovative IT-Lösungen
+                    und Digitalisierung!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Newsletter-->
+      <div class="newsletter-container">
+        <h2>
+          Melde dich jetzt für den CAMPUSBIER-Newsletter an und sichere dir
+          <strong>10%</strong> Willkommens-Rabatt
+        </h2>
+        <p class="newsletter-subtitle">
+          Immer als Erstes über neue Produkte, Angebote und Aktionen informiert
+          sein.
+        </p>
+
+        <form class="newsletter-form" onsubmit="event.preventDefault()">
+          <div class="newsletter-input-wrapper">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="E-Mail"
+              required
+            />
+            <button class="green-button">ABSCHICKEN</button>
+          </div>
+        </form>
+      </div>
+
+      <!--Footer-->
+      <div class="footer-container">
+        <img
+          src="assets/icons/global/cb_logo_footer.svg"
+          class="cb-logo-footer"
+          alt="Footer Logo"
+        />
+        <ul class="footer-icons">
+          <li>
+            <a
+              href="https://www.facebook.com/Campusbier/?locale=de_DE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/icons/global/logo_fb.svg" alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/campusbier/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/icons/global/logo_ig.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCV4xOoaH4hNU0Zl2j0eiPQQ/about"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/icons/global/logo_yt.svg" alt="YouTube" />
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-links">
+          <li>© 2026, Campusbier Powered by Shopify</li>
+          <li>Widerrufsrecht</li>
+          <li>Datenschutzerklärung</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

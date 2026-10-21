@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campusbier Shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="top-header">
+        Die Abholung findet ab jetzt wieder am Schmied im Hone statt.
+      </div>
+
+      <!--Navigationsleiste-->
+      <div class="navbar-container">
+        <button class="hamburger">
+          <img
+            src="assets/icons/global/hamburger_menu.svg"
+            alt="Hamburger Menü"
+          />
+        </button>
+        <a href="index.html">
+          <img
+            class="navlogo"
+            src="assets/icons/global/cb_logo_hell.svg"
+            alt="Logo"
+          />
+        </a>
+
+        <ul class="nav-links-desktop">
+          <li>
+            <a href="cb_shop.html">Shop</a>
+          </li>
+
+          <!--Dropdown: "Unsere Biere"-->
+          <li class="dropdown">
+            <a
+              class="dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Unsere Biere
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" href="cb_hell.html">Campusbier Hell</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="cb_dunkel.html"
+                  >Campusbier Dunkel</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="index.html#info-section">Campusbier-Projekt</a>
+          </li>
+        </ul>
+
+        <div class="nav-icons">
+          <a href="warenkorb.html">
+            <img
+              class="cart-icon"
+              src="assets/icons/global/warenkorb.svg"
+              alt="Warenkorb"
+            />
+            <span class="cart-count" id="cart-total">€0.00</span>
+          </a>
+        </div>
+      </div>
+
+      <!--Sidebar für mobile Ansicht-->
+      <div class="sidebar" id="sidebar">
+        <ul>
+          <li>
+            <a href="cb_shop.html">Shop</a>
+          </li>
+          <li>
+            <span>Unsere Biere</span>
+            <ul class="sidebar-sub">
+              <li>
+                <a href="cb_hell.html">Campusbier Hell</a>
+              </li>
+              <li>
+                <a href="cb_dunkel.html">Campusbier Dunkel</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="index.html#info-section">Campusbier-Projekt</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="overlay" id="overlay"></div>
+
+      <!--Überschrift-->
+      <div class="title-center shop-heading">
+        <span class="sub-heading">WAS DARF'S HEUTE SEIN?</span>
+        <h1>CAMPUSBIER SHOP</h1>
+      </div>
+      <div class="grey-gradient"></div>
+
+      <!--Produkte-->
+      <div class="product-container product-container-large">
+        <div class="product-card product-card-large">
+          <img src="assets/bilder/shop/6er_hell.webp" alt="Produktbild" />
+          <div class="product-info">
+            <h3>6er Campusbier Hell</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€12.00 EUR</a>
+            <a class="product-unit-price">€ 6.00/l</a>
+            <button class="green-button" data-id="1">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/6er_hell_geschenk.webp"
+            alt="Produktbild"
+          />
+          <div class="product-info">
+            <h3>6er Campusbier Hell Geschenk</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€15.00 EUR</a>
+            <a class="product-unit-price">€ 7.50/l</a>
+            <button class="green-button" data-id="2">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img src="assets/bilder/shop/cb_hell_kiste.webp" alt="Produktbild" />
+          <div class="product-info">
+            <h3>Kiste Campusbier hell</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€39.50 EUR</a>
+            <a class="product-unit-price">€ 4.94/l</a>
+            <button class="green-button" data-id="3">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img src="assets/bilder/shop/6er_dunkel.webp" alt="Produktbild" />
+          <div class="product-info">
+            <h3>6er Campusbier Dunkel</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€12.00 EUR</a>
+            <a class="product-unit-price">€ 6.00/l</a>
+            <button class="green-button" data-id="4">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/6er_dunkel_geschenk.webp"
+            alt="Produktbild"
+          />
+          <div class="product-info">
+            <h3>6er Campusbier Dunkel Geschenk</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€15.00 EUR</a>
+            <a class="product-unit-price">€ 7.50/l</a>
+            <button class="green-button" data-id="5">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/cb_dunkel_kiste.webp"
+            alt="Produktbild"
+          />
+          <div class="product-info">
+            <h3>Kiste Campusbier Dunkel</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€39.50 EUR</a>
+            <a class="product-unit-price">€ 4.94/l</a>
+            <button class="green-button" data-id="6">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/6er_twin.webp"
+            alt="6er Campusbier Duo"
+          />
+          <div class="product-info">
+            <h3>6er Campusbier Duo</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€12.00 EUR</a>
+            <a class="product-unit-price">€ 6.00/l</a>
+            <button class="green-button" data-id="7">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/6er_duo_geschenk.webp"
+            alt="6er Campusbier Duo Geschenk"
+          />
+          <div class="product-info">
+            <h3>6er Campusbier Duo Geschenk</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€15.00 EUR</a>
+            <a class="product-unit-price">€ 7.50/l</a>
+            <button class="green-button" data-id="8">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/kiste_duo.webp"
+            alt="Kiste Campusbier Duo"
+          />
+          <div class="product-info">
+            <h3>Kiste Campusbier Duo</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€39.50 EUR</a>
+            <a class="product-unit-price">€ 4.94/l</a>
+            <button class="green-button" data-id="9">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/cb_seife_hell.webp"
+            alt="Bierseife Campusbier Hell"
+          />
+          <div class="product-info">
+            <h3>Bierseife Campusbier Hell</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€8.60 EUR</a>
+            <button class="green-button" data-id="10">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/seife_dunkel.webp"
+            alt="Bierseife Campusbier Dunkel"
+          />
+          <div class="product-info">
+            <h3>Bierseife Campusbier Dunkel</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€8.60 EUR</a>
+            <button class="green-button" data-id="11">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/gutschein.webp"
+            alt="Campusbier-Geschenkgutschein"
+          />
+          <div class="product-info">
+            <h3>Campusbier-Geschenkgutschein</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>Von €25.00 EUR</a>
+            <button class="green-button" data-id="12">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/hs_freude.webp"
+            alt="Kleine Hochschulfreude"
+          />
+          <div class="product-info">
+            <h3>Kleine Hochschulfreude</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€14.99 EUR</a>
+            <button class="green-button" data-id="13">In den Warenkorb</button>
+          </div>
+        </div>
+
+        <div class="product-card product-card-large">
+          <img
+            src="assets/bilder/shop/hs_freude_alkoholfrei.webp"
+            alt="Kleine Hochschulfreude alkoholfrei"
+          />
+          <div class="product-info">
+            <h3>Kleine Hochschulfreude alkoholfrei</h3>
+            <p class="product-brand">CAMPUSBIER</p>
+            <a>€14.99 EUR</a>
+            <button class="green-button" data-id="14">In den Warenkorb</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Newsletter-->
+      <div class="newsletter-container">
+        <h2>
+          Melde dich jetzt für den CAMPUSBIER-Newsletter an und sichere dir
+          <strong>10%</strong> Willkommens-Rabatt
+        </h2>
+        <p class="newsletter-subtitle">
+          Immer als Erstes über neue Produkte, Angebote und Aktionen informiert
+          sein.
+        </p>
+
+        <form class="newsletter-form" onsubmit="event.preventDefault()">
+          <div class="newsletter-input-wrapper">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="E-Mail"
+              required
+            />
+            <button class="green-button">ABSCHICKEN</button>
+          </div>
+        </form>
+      </div>
+
+      <!--Footer-->
+      <div class="footer-container">
+        <img
+          src="assets/icons/global/cb_logo_footer.svg"
+          class="cb-logo-footer"
+          alt="Footer Logo"
+        />
+        <ul class="footer-icons">
+          <li>
+            <a
+              href="https://www.facebook.com/Campusbier/?locale=de_DE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/icons/global/logo_fb.svg" alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/campusbier/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/icons/global/logo_ig.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCV4xOoaH4hNU0Zl2j0eiPQQ/about"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/icons/global/logo_yt.svg" alt="YouTube" />
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-links">
+          <li>© 2026, Campusbier Powered by Shopify</li>
+          <li>Widerrufsrecht</li>
+          <li>Datenschutzerklärung</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

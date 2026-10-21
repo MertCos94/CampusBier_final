@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campusbier Dunkel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="top-header">
+        Die Abholung findet ab jetzt wieder am Schmied im Hone statt.
+      </div>
+
+      <!--Navigationsleiste-->
+      <div class="navbar-container">
+        <button class="hamburger">
+          <img
+            src="assets/icons/global/hamburger_menu.svg"
+            alt="Hamburger Menü"
+          />
+        </button>
+        <a href="index.html">
+          <img
+            class="navlogo"
+            src="assets/icons/global/cb_logo_hell.svg"
+            alt="Logo"
+          />
+        </a>
+
+        <ul class="nav-links-desktop">
+          <li>
+            <a href="cb_shop.html">Shop</a>
+          </li>
+
+          <!--Dropdown: "Unsere Biere"-->
+          <li class="dropdown">
+            <a
+              class="dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Unsere Biere
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a class="dropdown-item" href="cb_hell.html">Campusbier Hell</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="cb_dunkel.html"
+                  >Campusbier Dunkel</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="index.html#info-section">Campusbier-Projekt</a>
+          </li>
+        </ul>
+
+        <div class="nav-icons">
+          <a href="warenkorb.html">
+            <img
+              class="cart-icon"
+              src="assets/icons/global/warenkorb.svg"
+              alt="Warenkorb"
+            />
+            <span class="cart-count" id="cart-total">€0.00</span>
+          </a>
+        </div>
+      </div>
+
+      <!--Sidebar für mobile Ansicht-->
+      <div class="sidebar" id="sidebar">
+        <ul>
+          <li>
+            <a href="cb_shop.html">Shop</a>
+          </li>
+          <li>
+            <span>Unsere Biere</span>
+            <ul class="sidebar-sub">
+              <li>
+                <a href="cb_hell.html">Campusbier Hell</a>
+              </li>
+              <li>
+                <a href="cb_dunkel.html">Campusbier Dunkel</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="index.html#info-section">Campusbier-Projekt</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="overlay" id="overlay"></div>
+
+      <!--ABSCHNITT 1: "CAMPUSBIER DUNKEL"-->
+      <div class="text-box2">
+        <span class="sub-heading">UNSERE BIERE</span>
+        <h2 class="section-title">CAMPUSBIER DUNKEL</h2>
+
+        <div class="info-box info-box-flush">
+          <p>
+            Das CAMPUSBIER Dunkel präsentiert sich als eine herausragende
+            untergärige Bierspezialität, die mit höchster Sorgfalt und gemäß dem
+            deutschen Reinheitsgebot gebraut wird. Es zeichnet sich durch eine
+            naturtrübe Beschaffenheit aus und wird durch die Verwendung von drei
+            verschiedenen Malzsorten - Pilsener, Münchner und CaraMünch -
+            geprägt. Diese Malze verleihen dem Bier seinen charakteristischen
+            malzigen Körper sowie eine wunderschöne bernsteinfarbene Erscheinung
+            mit einem EBC-Wert von 23.
+          </p>
+          <p>
+            Das CAMPUSBIER Dunkel offenbart ein subtil leichtes Hopfenaroma, das
+            von einer dezenten Bitterkeit begleitet wird, welche durch die
+            Verwendung der Hopfensorten Hallertauer Magnum und Perle erzielt
+            wird. Diese sorgfältig ausgewählten Hopfensorten tragen zur
+            Geschmackskomplexität bei und verleihen dem Dunkel eine feine
+            Balance zwischen Malzigkeit und Bitterkeit.
+          </p>
+          <p>
+            Ein weiterer Höhepunkt dieses Bieres ist sein Stammwürzegehalt von
+            11,5°P sowie sein Alkoholgehalt von 4,9%vol, die das
+            Geschmackserlebnis abrunden und dem Dunkel eine angenehme Stärke
+            verleihen. Diese sorgfältig ausbalancierte Kombination von Aromen
+            und Texturen macht das CAMPUSBIER Dunkel zu einem wahren Genuss für
+            anspruchsvolle Bierliebhaber und bietet ein unvergleichliches
+            Geschmackserlebnis bei jedem Schluck.
+          </p>
+        </div>
+      </div>
+
+      <!--ABSCHNITT 2: TABELLE-->
+      <div class="bier-wrapper">
+        <img
+          src="assets/bilder/landingpage/cb_dunkel.png"
+          class="bier-flasche-img"
+          alt="Campusbier Dunkel Flasche"
+        />
+
+        <div class="beer-specs-container">
+          <table class="beer-specs-table">
+            <tbody>
+              <tr>
+                <td class="spec-label">
+                  <img
+                    class="spec-icon"
+                    src="assets/icons/icons_cb_dunkel/todo-line.svg"
+                    alt=""
+                  />
+                  Zutaten
+                </td>
+                <td class="spec-value">
+                  Brauwasser, Gerstenmalz, Hopfen, Hefe
+                </td>
+              </tr>
+
+              <tr>
+                <td class="spec-label">
+                  <img
+                    class="spec-icon"
+                    src="assets/icons/icons_cb_dunkel/leaf-line.svg"
+                    alt=""
+                  />
+                  Malz
+                </td>
+                <td class="spec-value">
+                  Pilsener Malz, Münchener Malz, CaraMünch
+                </td>
+              </tr>
+
+              <tr>
+                <td class="spec-label">
+                  <img
+                    class="spec-icon"
+                    src="assets/icons/icons_cb_dunkel/flower-line.svg"
+                    alt=""
+                  />
+                  Hopfen
+                </td>
+                <td class="spec-value">Hallertauer Magnum und Perle</td>
+              </tr>
+
+              <tr>
+                <td class="spec-label">
+                  <img
+                    class="spec-icon"
+                    src="assets/icons/icons_cb_dunkel/flask-line.svg"
+                    alt=""
+                  />
+                  Hefetyp
+                </td>
+                <td class="spec-value">untergärig</td>
+              </tr>
+
+              <tr>
+                <td class="spec-label">
+                  <img
+                    class="spec-icon"
+                    src="assets/icons/icons_cb_dunkel/palette-line.svg"
+                    alt=""
+                  />
+                  Farbeinheit
+                </td>
+                <td class="spec-value">23 EBC</td>
+              </tr>
+
+              <tr>
+                <td class="spec-label">
+                  <img
+                    class="spec-icon"
+                    src="assets/icons/icons_cb_dunkel/contrast-drop-2-line.svg"
+                    alt=""
+                  />
+                  Bittereinheiten
+                </td>
+                <td class="spec-value">21 IBU</td>
+              </tr>
+
+              <tr>
+                <td class="spec-label">
+                  <img
+                    class="spec-icon"
+                    src="assets/icons/icons_cb_dunkel/goblet-line.svg"
+                    alt=""
+                  />
+                  Alkoholgehalt
+                </td>
+                <td class="spec-value">4,9 Vol.-%</td>
+              </tr>
+
+              <tr>
+                <td class="spec-label">
+                  <img
+                    class="spec-icon"
+                    src="assets/icons/icons_cb_dunkel/beer-line.svg"
+                    alt=""
+                  />
+                  Stammwürze
+                </td>
+                <td class="spec-value">11,5 °Plato</td>
+              </tr>
+
+              <tr>
+                <td class="spec-label">
+                  <img
+                    class="spec-icon"
+                    src="assets/icons/icons_cb_dunkel/temp-cold-line.svg"
+                    alt=""
+                  />
+                  Trinktemperatur
+                </td>
+                <td class="spec-value">ca. 8 °C</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!--Newsletter-->
+      <div class="newsletter-container">
+        <h2>
+          Melde dich jetzt für den CAMPUSBIER-Newsletter an und sichere dir
+          <strong>10%</strong> Willkommens-Rabatt
+        </h2>
+        <p class="newsletter-subtitle">
+          Immer als Erstes über neue Produkte, Angebote und Aktionen informiert
+          sein.
+        </p>
+
+        <form class="newsletter-form" onsubmit="event.preventDefault()">
+          <div class="newsletter-input-wrapper">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="E-Mail"
+              required
+            />
+            <button class="green-button">ABSCHICKEN</button>
+          </div>
+        </form>
+      </div>
+
+      <!--Footer-->
+      <div class="footer-container">
+        <img
+          src="assets/icons/global/cb_logo_footer.svg"
+          class="cb-logo-footer"
+          alt="Footer Logo"
+        />
+        <ul class="footer-icons">
+          <li>
+            <a
+              href="https://www.facebook.com/Campusbier/?locale=de_DE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/icons/global/logo_fb.svg" alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/campusbier/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/icons/global/logo_ig.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCV4xOoaH4hNU0Zl2j0eiPQQ/about"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="assets/icons/global/logo_yt.svg" alt="YouTube" />
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-links">
+          <li>© 2026, Campusbier Powered by Shopify</li>
+          <li>Widerrufsrecht</li>
+          <li>Datenschutzerklärung</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
